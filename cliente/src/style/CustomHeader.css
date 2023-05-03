@@ -1,0 +1,28 @@
+header {
+   
+    height: 70px;
+    padding: 5px 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: #264771;
+    color: white;
+    align-items: center;
+}
+
+#navegador {
+    display: flex;
+    justify-content: right;
+    
+}
+
+#navegador > nav > ul{
+    display:flex;
+    justify-content:space-around;
+    
+    list-style: none;
+}
+
+
+    #navegador > nav > ul > li{
+        margin-left:10px;
+    }
