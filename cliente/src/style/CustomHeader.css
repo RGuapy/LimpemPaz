@@ -23,6 +23,15 @@ header {
 }
 
 
-    #navegador > nav > ul > li{
-        margin-left:10px;
-    }
+#navegador > nav > ul > li{
+    margin-left:10px;
+}
+
+#navegador > nav > ul > li > a{
+    text-decoration: none;
+}
+
+#navegador > nav > ul > li > a:visited{
+    text-decoration: none;
+    color: white;
+}

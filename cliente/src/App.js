@@ -1,23 +1,12 @@
-import './style/App.css';
-import TaskCreator from "./TaskCreator"
-import TaskShower from "./TaskShower"
-import CustomHeader from "./CustomHeader"
-import CustomAside from "./CustomAside"
-import { useState } from "react"
+import './style/App.css'
+import Rotas from './Rotas'
+import React,{ useState } from "react"
+
 
 function App() {
-    const [display, setDisplay] = useState()
+    
     return (
-        <div id="principal">
-          <CustomHeader />
-          
-          <main>
-            <CustomAside />
-            <TaskCreator />
-            <TaskShower modificado={[display, setDisplay]} />
-              
-          </main>
-        </div>
+      <Rotas/>
     );
 }
 
