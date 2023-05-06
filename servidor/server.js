@@ -37,4 +37,4 @@ app.post('/cards', (req, res) => {
 })
 
 
-app.listen(5000,()=>console.log('escutando'))
+app.listen(5050,()=>console.log('escutando'))
