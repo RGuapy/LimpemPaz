@@ -6,7 +6,7 @@ export default class Api{
     constructor(){
         this.api = axios.create({
 
-            baseURL: "http://192.168.56.1:5000/"
+            baseURL: "http://172.17.20.47:5000/"
             })
         }
         
@@ -19,9 +19,8 @@ export default class Api{
     }
 
 
-    async getCard(genericSet) {
-        let gambi = [56,89,74,6,5]
-        let id = gambi[parseInt(Math.random() * gambi.length-1)]
+    async getCard(genericSet,listaRandom) {
+        let id = listaRandom[parseInt(Math.random() * listaRandom.length-1)]
         const res = await this.api.get('/cardsFight',{params: {selecionado:id}})
        
         genericSet((res.data))

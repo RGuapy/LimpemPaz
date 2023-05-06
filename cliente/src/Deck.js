@@ -2,6 +2,7 @@ import React,{useState} from "react"
 import Api from './Api'
 
 export default function Deck(){
+    const [table, setTable] = useState({})
     const [card, setcard] = useState({})
     //const [ale, setAle] = useState(0)
     const api = new Api()
@@ -30,14 +31,26 @@ export default function Deck(){
 
     }
 
+    function getIdsTable(table){
+        let ids = []
+        let chaves = Object.keys(table)
+        chaves.map((chave) => {
+            ids.push(table[chave].id_card)
+        })
+        return ids
+    }
 
+    function generateDeck(){
+        api.getInfo(setTable)
+        api.getCard(setcard,getIdsTable(table))
+    }
 
 
 
     return(
         <>
         
-        <button onClick={()=>{api.getCard(setcard)}}>Pegar card</button>
+        <button onClick={()=>generateDeck()}>Pegar card</button>
         <div>
             {showCard(card)}
         </div>

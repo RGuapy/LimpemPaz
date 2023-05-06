@@ -176,7 +176,7 @@ class CardTask extends HTMLElement{
 
 	editCard(outtitulo, outimg, outrating, outduration, outusuario) {
 		let root = this.shadowRoot
-		console.log(outusuario)
+		//console.log(outusuario)
 		//titulo
 		let titulo = root.querySelector("div.fullCard > div.frontCard > h3")
 		titulo.innerHTML = outtitulo
