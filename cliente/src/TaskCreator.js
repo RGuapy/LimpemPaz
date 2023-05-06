@@ -6,7 +6,7 @@ import CardTask from "./componentes/componentesCards"
 
 export default function TaskCreator() {
     const [task, setTask] = useState({})
-
+    const api = new Api()
 
     function changeInput(e) {
         setTask(anterior =>( {
@@ -62,7 +62,7 @@ export default function TaskCreator() {
             </div>
                 
             <button onClick={() => {
-                Api.post('/cards', task)
+                api.api.post('/cards', task)
                 console.log(task)
             }
             }>enviar</button>

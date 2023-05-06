@@ -9,14 +9,18 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('/cards', (req, res) => {
-    db.query("select * from TaskCards;", (err, consulta) => {
-        console.log(consulta.length)
+app.get('/cardsFight', (req, res) => {
+    db.query(`select * from TaskCards where id_card= ${req.query.selecionado};`, (err, consulta) => {
         res.send(consulta)
     })
 })
 
-
+app.get('/cards', (req, res) => {
+    db.query("select * from TaskCards;", (err, consulta) => {
+        console.log("entrougetinfo")
+        res.send(consulta)
+    })
+})
 
 
 app.post('/cards', (req, res) => {

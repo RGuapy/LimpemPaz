@@ -5,7 +5,6 @@ import Deck from "./Deck"
 
 export default function Arena(){
 
-
     return(
         <div id="principal">
             <CustomHeader />

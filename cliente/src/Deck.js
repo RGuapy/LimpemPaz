@@ -2,23 +2,45 @@ import React,{useState} from "react"
 import Api from './Api'
 
 export default function Deck(){
-    
-    const [table, setTable] = useState({})
-    const [ale, setAle] = useState(0)
+    const [card, setcard] = useState({})
+    //const [ale, setAle] = useState(0)
+    const api = new Api()
 
 
-    async function getInfo() {
-        const res = await Api.get('/cards')
-       
-        setTable((res.data))
-        setAle(parseInt(Math.random() * table.length))
+
+
+    function showCard(data) {
+        const chaves = Object.keys(data).reverse()
+
+        return (chaves.map((chave) => {
+            const linha = data[chave]
+
+            return (<card-task
+                key={linha.id_card}
+                titulo={linha.nome}
+                rating={linha.rating}
+                duration={linha.duracao}
+                usuario={linha.usuario}
+                foto={linha.img}
+                
+                    ></card-task>)
+
+            })
+        )
 
     }
 
+
+
+
+
     return(
         <>
-        <h1>{ale}</h1>
-        <button onClick={()=>{getInfo()}}>Dar o Deck</button>
+        
+        <button onClick={()=>{api.getCard(setcard)}}>Pegar card</button>
+        <div>
+            {showCard(card)}
+        </div>
         </>
     )
 }

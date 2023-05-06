@@ -11,11 +11,7 @@ export default function TaskShower(modificado) {
     const [table, setTable] = useState({})
 
 
-    async function getInfo() {
-        const res = await Api.get('/cards')
-       
-        setTable((res.data))
-    }
+    const api = new Api()
 
     //function hideCreator(modificado) {
     //    console.log(`aqui o modificado ${modificado}`)
@@ -51,7 +47,7 @@ export default function TaskShower(modificado) {
     return (
         <div id="task-shower">
             <div id="button-container">
-                <button onClick={() => getInfo()}>MOSTRAR CARTAS</button>
+                <button onClick={() => api.getInfo(setTable)}>MOSTRAR CARTAS</button>
             </div>
             <div id="shower-container">
                 <div className="shower">
