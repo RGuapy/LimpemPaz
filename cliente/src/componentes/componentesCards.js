@@ -77,7 +77,7 @@ class CardTask extends HTMLElement{
 		.frontCard{
 			text-align:center;
 			transform: rotatey(180deg);
-			background: rgba(138,236,255,0.7);
+			background: rgba(138,236,255);
 		}
 
 		.frontCardImg{
@@ -183,7 +183,7 @@ class CardTask extends HTMLElement{
 
 		//img
 		let foto = root.querySelector("div.fullCard > div.frontCard > div.frontCardImg")
-		foto.style.background = `no-repeat center/110% 120% url(${outimg})`
+		foto.style.background = `#fff no-repeat center/110% 120% url(${outimg})`
 
 		//rating
 		let rating = root.querySelector("div.fullCard > div.frontCard > p.rating")

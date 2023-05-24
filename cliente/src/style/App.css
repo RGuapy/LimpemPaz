@@ -4,21 +4,26 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background: url('https://img.freepik.com/free-photo/top-view-frame-with-cleaning-products-wooden-background_23-2148357412.jpg?w=2000') no-repeat;
+    background-size: cover;
+}
+
 #principal {
-    width: 96%;
+    
     
     margin: 0 2%;
     display: grid;
     grid-template-rows: 1fr;
-    grid-gap:50px;
+    grid-gap:10px;
 }
 
 
 
 main {
     display: flex;
-
-    height: 700px;
+    flex-wrap: wrap;
+    min-height: 700px;
     justify-content: space-around !important;
     align-content: center;
     
@@ -26,6 +31,9 @@ main {
 
 main> *{
     margin-right:10px;
+    margin-bottom:20px;
+    margin-top:20px;
+
 }
 
    

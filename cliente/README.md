@@ -1,3 +1,11 @@
+# Making it work after a clone
+.Run dependences.ps1 with shell on LIMPEMPAZ folder
+.Start Mysql
+.Run criandoLimpempaz.sql
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
